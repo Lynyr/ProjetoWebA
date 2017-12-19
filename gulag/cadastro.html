@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>GULAG CANAVIEIRO: THE GAME (you just lost it.)</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="/gulag/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/gulag/css/style.css">
+</head>
+<body style="background-image:url(/gulag/img/gulagintro.jpg)">
+
+  <!--Texto Topo-->
+
+  <div class="container">
+    <div class="h1">СДDДSТЯO</div>
+  </div>
+
+  <!--Form-->
+
+  <div class="container">
+    <form name="cadastro" action="/gulag/cadastro.php"  method="post" id="myform">
+
+      <!--Login-->
+
+      <div class="form-group row">
+        <label for="login" class="col-sm-3 form-control-label">LOGIN</label>
+        <div class="col-sm-9">
+          <input type="text" pattern="[a-zA-Z0-9]+" id="login" name="login" required placeholder="Login (Somente Letras e Números)" class="form-control">
+          <span class="error-login error"></span>
+        </div>
+      </div>
+
+      <!--Senha-->
+
+      <div class="form-group row">
+        <label for="senha" class="col-sm-3 form-control-label">SENHA</label>
+        <div class="col-sm-9">
+          <input type="password" id="senha" name="senha" required placeholder="Senha" class="form-control">
+          <span class="error-senha error"></span>
+        </div>
+      </div>
+
+      <!--Confirmar Senha-->
+
+      <div class="form-group row">
+        <label for="senha" class="col-sm-3 form-control-label">CONFIRMAR SENHA</label>
+        <div class="col-sm-9">
+          <input type="password" id="senhaconfirm" name="senhaconfirm" required placeholder="Confirmar Senha" class="form-control">
+          <span class="error-senhaconfirm error"></span>
+        </div>
+      </div>
+
+      <!--Botão-->
+
+      <button type="submit" class="btn btn-danger">Confirmar</button>
+      <a href="index.html" type="button" class="btn btn-secondary">Voltar</a>
+      <div id="message"></div>
+    </form>
+  </div>
+
+  <!--Scripts-->
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $.getScript("/gulag/script/cadastro.js");
+    });
+  </script>
+  </body>
+</html>
